@@ -1,0 +1,14 @@
+<script>
+// find small and largest num
+let small = 0;
+for(let i=0; i<len; i++){
+  if(i === 0){
+     largest = small = arr[i];
+   }else if(small > arr[i]){
+     small = arr[i];
+   }else if(largest < arr[i]){
+     largest = arr[i]
+   }
+}
+console.log(largest, small)
+</script>
