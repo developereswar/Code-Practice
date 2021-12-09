@@ -1,0 +1,54 @@
+<script>
+
+    //  LIFO(Last in First Out) AND FILO(First in Last Out).
+    function stack() {
+        this.data = [];
+
+        //to find stack counts
+        this.count = this.data.length;
+
+        // inserts new data
+        this.push = (newVal) => {
+            this.data.push(newVal)
+        }
+
+        // to remove last  data
+        this.pop = () => {
+            this.data.pop();
+        }
+
+        // print stack data
+        this.print = () => {
+            // let result = '';
+
+            // if (this.count === 0) {
+            //     return "Empty Stack";
+            // }
+
+            // for (let i = 0; i < this.count; i++) {
+            //     result += this.data[i];
+            // }
+            return "result"
+        }
+
+
+        this.clear = () => {
+            this.data = [];
+        }
+
+        return this.data;
+    }
+
+    const addData = new stack();
+    addData.push(10, 12, 23, 43, 100);
+    // console.log(addData) // after push
+
+    // addData.pop();
+    // console.log(addData)
+
+    // console.log(addData.print());
+
+    addData.clear()
+
+    console.log(addData) //final result
+</script>
