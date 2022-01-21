@@ -16,6 +16,42 @@
 	}
 	
 console.log(largest, secondLarg)
+	
+	
+	
+// 	Recursive Method
+	
+	function findSecondLargeNum(...param){
+if(arr && arr.length === 0) return "invalid input";
+  if(count < arr.length)
+  {
+
+     if(count === 0){
+       first = arr[count]
+       return findSecondLargeNum(arr, count++, first, second)
+     } 
+    
+    if(first < arr[count]){
+      second = first;
+      first = arr[count];
+     return findSecondLargeNum(arr, count++, first, second);
+    }
+    
+    if(second < arr[count]){
+      second = arr[count];
+      return findSecondLargeNum(arr, count++, first, second);
+    }
+ 
+    
+   return findSecondLargeNum(arr, count++, first, second);
+  }else{
+    return "second largest num is "+ second
+  }
+  
+}
+
+ console.log(findSecondLargeNum(arr=[111, 22,12,9,2,1,10,20,1021], count=0, first=0, second=0));
+
 
 </script>/
 
