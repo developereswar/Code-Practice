@@ -1,0 +1,29 @@
+<script>
+  function binarySearch(arr, key){
+
+let len = arr.length;
+if(len<2) retur;
+
+let midVal =  Math.floor((len-1)/2);
+
+if(arr[midVal] === key) return midVal;
+
+let leftArr = rightArr = [];
+
+for(let i=0; i<midVal; i++){
+	leftArr.push(arr[i])
+}
+
+for(let j=midVal; j<len-1; j++){
+	rightArr.push(arr[j])
+}
+
+if(leftArr.includes(key)){
+	return arr.indexOf(key)
+}else{
+	return arr.indexOf(key)
+}
+	
+}
+  
+</script>
